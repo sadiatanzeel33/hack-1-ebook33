@@ -1,0 +1,108 @@
+.chatbotContainer {
+    display: flex;
+    flex-direction: column;
+    height: 600px; /* Fixed height for the chatbot window */
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-border-radius);
+    overflow: hidden;
+    background-color: var(--ifm-background-color);
+    box-shadow: var(--ifm-global-shadow-md);
+  }
+  
+  .messagesContainer {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--ifm-background-color);
+  }
+  
+  .message {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.4;
+  }
+  
+  .message.user {
+    background-color: var(--ifm-color-primary);
+    color: var(--ifm-color-white);
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .message.bot {
+    background-color: var(--ifm-color-emphasis-200);
+    color: var(--ifm-text-color);
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+  }
+
+  .message.bot .sources {
+    font-size: 0.75em;
+    opacity: 0.7;
+    margin-top: 5px;
+  }
+  
+  .welcomeMessage {
+    text-align: center;
+    color: var(--ifm-text-color);
+    opacity: 0.6;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .loadingMessage, .errorMessage {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    color: var(--ifm-color-primary-light);
+  }
+  
+  .errorMessage {
+    color: var(--ifm-color-danger);
+  }
+  
+  .inputContainer {
+    display: flex;
+    padding: 10px 15px;
+    border-top: 1px solid var(--ifm-color-emphasis-300);
+    background-color: var(--ifm-background-color);
+  }
+  
+  .chatInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 20px;
+    margin-right: 10px;
+    background-color: var(--ifm-background-color);
+    color: var(--ifm-text-color);
+  }
+  
+  .chatInput:focus {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+  }
+  
+  .sendButton {
+    background-color: var(--ifm-color-primary);
+    color: var(--ifm-color-white);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .sendButton:hover:not(:disabled) {
+    background-color: var(--ifm-color-primary-dark);
+  }
+  
+  .sendButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  

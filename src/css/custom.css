@@ -1,0 +1,114 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Default light mode variables (though we're forcing dark) */
+  --ifm-color-primary: #526788;
+  --ifm-color-primary-dark: #465a77;
+  --ifm-color-primary-darker: #40546f;
+  --ifm-color-primary-darkest: #34475c;
+  --ifm-color-primary-light: #5e7499;
+  --ifm-color-primary-lighter: #657a9f;
+  --ifm-color-primary-lightest: #788ebc;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Custom font family for better readability */
+  --ifm-font-family-base: "Merriweather", serif; /* A classic, readable serif font */
+  --ifm-font-family-monospace: "Fira Code", monospace; /* A popular monospace font for code */
+
+  /* Dark theme specific overrides for a "black" theme */
+  --ifm-background-color: #1a1a1a; /* Very dark background */
+  --ifm-text-color: #e0e0e0; /* Light text for contrast */
+  --ifm-color-emphasis-100: #f0f0f0; /* Lighter shades for emphasis */
+  --ifm-color-emphasis-200: #c0c0c0;
+  --ifm-color-emphasis-300: #909090;
+
+  /* Adjust primary colors for a dark/black theme aesthetic */
+  --ifm-color-primary: #bb86fc; /* Purple/magenta for accents */
+  --ifm-color-primary-dark: #a252fa;
+  --ifm-color-primary-darker: #923cf9;
+  --ifm-color-primary-darkest: #7a0bf8;
+  --ifm-color-primary-light: #d4aafa;
+  --ifm-color-primary-lighter: #e0c5fb;
+  --ifm-color-primary-lightest: #f0e3fc;
+}
+
+/* For readability concerns, we are enforcing dark mode, so these apply */
+html[data-theme='dark'] {
+  --ifm-background-color: #1a1a1a;
+  --ifm-text-color: #e0e0e0;
+  --ifm-color-emphasis-100: #f0f0f0;
+  --ifm-color-emphasis-200: #c0c0c0;
+  --ifm-color-emphasis-300: #909090;
+
+  --ifm-color-primary: #bb86fc;
+  --ifm-color-primary-dark: #a252fa;
+  --ifm-color-primary-darker: #923cf9;
+  --ifm-color-primary-darkest: #7a0bf8;
+  --ifm-color-primary-light: #d4aafa;
+  --ifm-color-primary-lighter: #e0c5fb;
+  --ifm-color-primary-lightest: #f0e3fc;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+
+/* General body text styling */
+body {
+  font-family: var(--ifm-font-family-base);
+  line-height: 1.8; /* Increased line height for better readability */
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-text-color);
+}
+
+/* Headings: Big headings */
+h1 { font-size: 3.5em; margin-top: 1.5em; margin-bottom: 0.5em; color: var(--ifm-color-primary); }
+h2 { font-size: 2.8em; margin-top: 1.2em; margin-bottom: 0.4em; color: var(--ifm-color-primary-light); }
+h3 { font-size: 2.2em; margin-top: 1em; margin-bottom: 0.3em; color: var(--ifm-color-primary-lighter); }
+h4 { font-size: 1.8em; margin-top: 0.8em; margin-bottom: 0.2em; }
+h5 { font-size: 1.5em; margin-top: 0.6em; margin-bottom: 0.2em; }
+h6 { font-size: 1.2em; margin-top: 0.5em; margin-bottom: 0.1em; }
+
+/* Paragraph: Medium context */
+p {
+  font-size: 1.1em; /* Slightly larger for medium context */
+  margin-bottom: 1.2em;
+}
+
+/* Limit content width for better readability in ebook format */
+.main-wrapper {
+  max-width: 850px; /* Optimal reading width, slightly wider for headings */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; /* Add some padding */
+}
+
+/* Ensure code blocks look good in dark theme */
+.docusaurus-highlighted-code-line {
+  background-color: var(--docusaurus-highlighted-code-line-bg);
+}
+
+/* Specific styling for admonitions (notes, warnings, etc.) */
+.theme-doc-markdown pre {
+  background-color: #282c34; /* Dark background for code blocks */
+  color: #abb2bf;
+}
+
+.theme-doc-markdown pre code {
+  color: #abb2bf;
+}
+
+/* Navbar text color adjustment for dark theme */
+.navbar__title {
+  color: var(--ifm-text-color);
+}
+
+.navbar__item.navbar__link {
+  color: var(--ifm-text-color);
+}
